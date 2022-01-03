@@ -20,7 +20,7 @@ function ItemsDisplay({ items, deleteItem }) {
   return (
     <div className="container">
       <div className="row">
-        <h2>ITEMS:</h2>
+        <h3>ITEMS:</h3>
       </div>
       <table className="table table-striped">
         <thead>

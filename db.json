@@ -1,3 +1,25 @@
 {
-  "items": []
+  "items": [
+    {
+      "name": "Coffee",
+      "price": "3.99",
+      "type": "Drink",
+      "brand": "COCO",
+      "id": 1
+    },
+    {
+      "name": "Smart Watch",
+      "price": "29.99",
+      "type": "Electronic",
+      "brand": "Samsung",
+      "id": 2
+    },
+    {
+      "name": "Plastic sheets",
+      "price": "9.99",
+      "type": "Utility",
+      "brand": "REV plastic",
+      "id": 3
+    }
+  ]
 }

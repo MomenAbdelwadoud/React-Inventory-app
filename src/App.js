@@ -39,16 +39,18 @@ function App() {
     fetch(`http://localhost:3000/items/${item.id}`, requestOptions).then(
       (response) => {
         if (response.ok) {
-          const idx = items.indexOf(item);
-          items.splice(idx);
-          setData({ items: items });
+          setData({
+            items: items.filter(
+              (curr) => items.indexOf(curr) !== items.indexOf(item)
+            ),
+          });
         }
       }
     );
   };
   const filterData = (data) => {
     let filteredData = [];
-    if (!filters.name) {
+    if (!filters.name && !filters.price && !filters.type && !filters.brand) {
       return data;
     }
 
@@ -73,15 +75,20 @@ function App() {
   return (
     <div className="container">
       <div className="row mt-3">
-        <ItemsDisplay
-          items={filterData(data["items"])}
-          deleteItem={deleteItem}
-        ></ItemsDisplay>
-      </div>
-      <div className="row mt-3">
         <SearchBar updateSearchParams={updateFilters}></SearchBar>
       </div>
       <div className="row mt-3">
+        {JSON.stringify(data["items"]) === "{}" ? (
+          <h4>No Items to display, please add items</h4>
+        ) : (
+          <ItemsDisplay
+            items={filterData(data["items"])}
+            deleteItem={deleteItem}
+          ></ItemsDisplay>
+        )}
+      </div>
+
+      <div className="row m-3">
         <AddItem addItem={addItems}></AddItem>
       </div>
     </div>

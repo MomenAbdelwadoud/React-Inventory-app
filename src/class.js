@@ -1,3 +1,5 @@
+// NOT USED JUST FOR LEARNING CLASS BASED COMPONENTS
+
 import React from "react";
 
 class Test extends React.Component {

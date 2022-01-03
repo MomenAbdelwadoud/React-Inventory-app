@@ -18,7 +18,7 @@ function SearchBar(props) {
   return (
     <div className="container">
       <div className="row">
-        <h1>Search For items</h1>
+        <h3>Search For items</h3>
       </div>
       <div className="row">
         <div className="col">

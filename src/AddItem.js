@@ -21,8 +21,8 @@ function AddItem(props) {
   };
   return (
     <div className="container">
-      <div className="row">
-        <h1>Add and Item</h1>
+      <div className="row mt-3">
+        <h3>Add and Item</h3>
       </div>
       <div className="row">
         <label htmlFor="name">Name:</label>
